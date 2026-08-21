@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kiran Ganji — Architecting Next-Gen AI, Cloud &amp; Intelligent Systems</title>
+  <meta name="description"
+    content="Portfolio of Kiran Ganji. Engineering deep neural networks, intelligent computer vision systems, and modern high-performance cloud applications." />
+  <meta name="author" content="Kiran Ganji" />
+  <meta name="theme-color" content="#f2f2f0" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Kiran Ganji — Architecting Next-Gen AI, Cloud &amp; Intelligent Systems" />
+  <meta property="og:description"
+    content="Engineering deep neural networks, intelligent computer vision systems, and modern high-performance cloud applications." />
+  <meta property="og:url" content="https://github.com/kiranganji02/portfolio-website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Kiran Ganji — Architecting Next-Gen AI, Cloud &amp; Intelligent Systems" />
+  <meta name="twitter:description"
+    content="Engineering deep neural networks, intelligent computer vision systems, and modern high-performance cloud applications." />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    (function () {
+      var saved = localStorage.getItem('theme');
+      var prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+      document.documentElement.setAttribute('data-theme', saved || (prefersLight ? 'light' : 'dark'));
+    })();
+  </script>
+</head>
+
+<body>
+
+  <!-- ── SCROLL PROGRESS ── -->
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+
+  <!-- ── NAVIGATION ── -->
+  <nav aria-label="Primary navigation">
+    <a href="#" class="nav-logo">Kiran Ganji<span>.</span></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about">Story</a></li>
+      <li><a href="#skills">Stack</a></li>
+      <li><a href="#projects">Builds</a></li>
+      <li><a href="#education">Background</a></li>
+      <li><a href="#contact" class="nav-cta">Connect →</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle light and dark mode">
+        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="4.5" />
+          <path
+            d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" />
+        </svg>
+        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
+        </svg>
+      </button>
+      <button id="nav-toggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false"
+        aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ── MOBILE MENU ── -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#about">Story</a>
+    <a href="#skills">Stack</a>
+    <a href="#projects">Builds</a>
+    <a href="#education">Background</a>
+    <a href="#contact" class="mobile-cta">Connect →</a>
+  </div>
+
+  <!-- ── HERO ── -->
+  <div class="hero">
+    <div class="hero-glow" aria-hidden="true"></div>
+    <div class="hero-canvas" id="hero-canvas" aria-hidden="true"></div>
+    <div class="badge">
+      <span class="badge-dot"></span>
+      Innovating with AI, Neural Vision &amp; Modern Cloud
+    </div>
+
+    <h1>
+      Hey, I'm Kiran Ganji.
+      <em>Architecting Intelligence &amp; Next-Gen Tech</em>
+    </h1>
+    <p class="hero-sub">
+      Driven by the frontier of artificial intelligence, deep convolutional vision systems, and modern full-stack
+      architectures. I transform complex algorithms, neural networks, and scalable databases into fast, intuitive, and
+      high-impact digital realities.
+    </p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn-primary">Explore my builds →</a>
+      <a href="#contact" class="btn-ghost">Let's innovate together</a>
+    </div>
+    <div class="dragon-hint" aria-hidden="true">
+      <span>🔥 Click anywhere to breathe dragon fire</span>
+    </div>
+  </div>
+
+  <!-- ── STATS BAR ── -->
+  <div class="stats-bar">
+    <div class="stat-item">
+      <span class="stat-num">Deep Learning</span>
+      <span class="stat-label">CNNs &amp; Computer Vision</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">7.84</span>
+      <span class="stat-label">B.E. CS &amp; Design CGPA</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">Cloud &amp; Web</span>
+      <span class="stat-label">AWS, React &amp; Microservices</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">Multi-Lang</span>
+      <span class="stat-label">Java, Python, C++, Kotlin</span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-num">Git Certified</span>
+      <span class="stat-label">Simplilearn DevOps</span>
+    </div>
+  </div>
+
+  <!-- ── MARQUEE ── -->
+  <div class="marquee-wrap" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Deep Neural Networks</span><span class="accent">✦</span>
+      <span>Computer Vision</span><span class="accent">✦</span>
+      <span>TensorFlow &amp; Keras</span><span class="accent">✦</span>
+      <span>OpenCV</span><span class="accent">✦</span>
+      <span>Java</span><span class="accent">✦</span>
+      <span>Python</span><span class="accent">✦</span>
+      <span>C / C++</span><span class="accent">✦</span>
+      <span>Kotlin</span><span class="accent">✦</span>
+      <span>React.js</span><span class="accent">✦</span>
+      <span>AWS Cloud</span><span class="accent">✦</span>
+      <span>MySQL &amp; MongoDB</span><span class="accent">✦</span>
+      <span>Intelligent Systems</span><span class="accent">✦</span>
+      <span>REST APIs</span><span class="accent">✦</span>
+      <span>Deep Neural Networks</span><span class="accent">✦</span>
+      <span>Computer Vision</span><span class="accent">✦</span>
+      <span>TensorFlow &amp; Keras</span><span class="accent">✦</span>
+      <span>OpenCV</span><span class="accent">✦</span>
+      <span>Java</span><span class="accent">✦</span>
+      <span>Python</span><span class="accent">✦</span>
+      <span>C / C++</span><span class="accent">✦</span>
+      <span>Kotlin</span><span class="accent">✦</span>
+      <span>React.js</span><span class="accent">✦</span>
+      <span>AWS Cloud</span><span class="accent">✦</span>
+      <span>MySQL &amp; MongoDB</span><span class="accent">✦</span>
+      <span>Intelligent Systems</span><span class="accent">✦</span>
+      <span>REST APIs</span><span class="accent">✦</span>
+    </div>
+  </div>
+
+  <!-- ── ABOUT (MY STORY) ── -->
+  <section id="about">
+    <div class="about-grid">
+      <div class="about-text fade-up">
+        <p class="section-tag">My Tech Story</p>
+        <h2 class="section-title">Bridging human imagination<br>with intelligent machines.</h2>
+        <p>My journey into technology began with a deep curiosity: <em>how can software learn to perceive, reason, and
+            transform our physical world?</em> Pursuing my degree in <strong>Computer Science &amp; Design</strong> at
+          Appa Institute of Engineering and Technology (Sharnbasva University), I set out to master both the rigorous
+          logic of computing and the creative power of next-gen technologies.</p>
+        <p>When I architected an <strong>AI Image Classification System</strong> using deep Convolutional Neural
+          Networks (CNNs), TensorFlow/Keras, and OpenCV to autonomously categorize complex visual data, I saw firsthand
+          how artificial intelligence can eliminate friction and solve real-world problems at scale.</p>
+        <p>From designing scalable database-driven architectures (like the <strong>Alumni Management Platform</strong>)
+          to crafting interactive 3D web graphics with Three.js and building IoT micro-controllers, I build across the
+          entire spectrum — fusing <strong>Java, Python, C++, Kotlin, React.js, and AWS Cloud</strong>.</p>
+        <p>I believe the next era belongs to software that is autonomous, intelligent, and beautifully crafted. I am
+          ready to collaborate with ambitious teams to engineer that future.</p>
+        <div style="margin-top:2rem; display:flex; gap:1rem; flex-wrap:wrap;">
+          <a href="#contact" class="btn-primary">Let's connect →</a>
+          <a href="#projects" class="btn-ghost">View my builds</a>
+        </div>
+      </div>
+      <div class="about-highlights fade-up">
+        <div class="highlight-card">
+          <span class="highlight-icon">🧠</span>
+          <h4>Neural Vision &amp; AI</h4>
+          <p>Designing Convolutional Neural Networks (CNNs) with TensorFlow/Keras and OpenCV for high-accuracy automated
+            visual perception.</p>
+        </div>
+        <div class="highlight-card">
+          <span class="highlight-icon">⚡</span>
+          <h4>Algorithmic Power</h4>
+          <p>Architecting robust, algorithmically efficient computational backends in Java, Python, and C/C++ built for
+            high concurrency.</p>
+        </div>
+        <div class="highlight-card">
+          <span class="highlight-icon">🌐</span>
+          <h4>Modern Full-Stack Cloud</h4>
+          <p>Developing reactive user experiences with React.js connected to scalable Flask/Django services, MySQL,
+            MongoDB, and AWS.</p>
+        </div>
+        <div class="highlight-card">
+          <span class="highlight-icon">🚀</span>
+          <h4>Frontier Explorer</h4>
+          <p>Constantly experimenting with emerging paradigms — from interactive 3D WebGL physics to intelligent
+            automation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SKILLS ── -->
+  <div class="skills-outer" id="skills">
+    <div class="inner">
+      <p class="section-tag">What I build with</p>
+      <h2 class="section-title">Tech Stack &amp; Frontier Tools</h2>
+      <p class="section-sub">A comprehensive toolkit built for the modern computing era — spanning deep learning,
+        scalable backends, reactive interfaces, and cloud tooling.</p>
+      <div class="skills-grid">
+        <div class="skill-cell fade-up">
+          <div class="skill-cell-icon">🧠</div>
+          <h3>AI &amp; Computer Vision</h3>
+          <p>Building neural network architectures, automated visual classifiers, and image processing pipelines.</p>
+          <div class="skill-tags">
+            <span class="tag">TensorFlow / Keras</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">CNNs</span>
+            <span class="tag">Deep Learning</span>
+            <span class="tag">Machine Learning</span>
+          </div>
+        </div>
+        <div class="skill-cell fade-up">
+          <div class="skill-cell-icon">💻</div>
+          <h3>Core Programming</h3>
+          <p>Writing clean, structured, and performant code for algorithmic problem-solving and software systems.</p>
+          <div class="skill-tags">
+            <span class="tag">Java</span>
+            <span class="tag">Python</span>
+            <span class="tag">C / C++</span>
+            <span class="tag">Kotlin</span>
+          </div>
+        </div>
+        <div class="skill-cell fade-up">
+          <div class="skill-cell-icon">🌐</div>
+          <h3>Modern Web Ecosystem</h3>
+          <p>Crafting high-speed, responsive, and interactive user interfaces with full-stack backend integrations.</p>
+          <div class="skill-tags">
+            <span class="tag">React.js</span>
+            <span class="tag">JavaScript (ES6+)</span>
+            <span class="tag">HTML5 / CSS3</span>
+            <span class="tag">Flask / Django</span>
+          </div>
+        </div>
+        <div class="skill-cell fade-up">
+          <div class="skill-cell-icon">🗄️</div>
+          <h3>Database &amp; Data Stores</h3>
+          <p>Architecting relational and document database schemas, data modeling, and query execution.</p>
+          <div class="skill-tags">
+            <span class="tag">MySQL</span>
+            <span class="tag">MongoDB</span>
+            <span class="tag">RDBMS</span>
+            <span class="tag">Data Normalization</span>
+          </div>
+        </div>
+        <div class="skill-cell fade-up">
+          <div class="skill-cell-icon">☁️</div>
+          <h3>Cloud &amp; DevOps</h3>
+          <p>Modern developer workflow tools, version control strategies, and cloud infrastructure foundations.</p>
+          <div class="skill-tags">
+            <span class="tag">AWS Cloud</span>
+            <span class="tag">Git &amp; GitHub</span>
+            <span class="tag">VS Code</span>
+            <span class="tag">Linux</span>
+          </div>
+        </div>
+        <div class="skill-cell fade-up">
+          <div class="skill-cell-icon">📐</div>
+          <h3>System &amp; UI Design</h3>
+          <p>Combining computer science fundamentals with user-centric design and scalable software engineering.</p>
+          <div class="skill-tags">
+            <span class="tag">REST APIs</span>
+            <span class="tag">Responsive UI/UX</span>
+            <span class="tag">OOP Design</span>
+            <span class="tag">Interactive 3D</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── PROJECTS ── -->
+  <section id="projects">
+    <p class="section-tag">My Builds</p>
+    <h2 class="section-title">Featured Innovations &amp; Builds</h2>
+    <p class="section-sub">A showcase of practical engineering — from deep neural network classifiers to centralized
+      full-stack platforms.</p>
+    <div class="projects-grid">
+
+      <div class="project-card fade-up">
+        <span class="project-num">01 // AI &amp; COMPUTER VISION</span>
+        <h3>AI Image Classification System</h3>
+        <p>Developed an AI-based image classification system to automatically distinguish document images from human
+          photographs. Implemented a Convolutional Neural Network (CNN) for image preprocessing and classification with
+          TensorFlow/Keras and OpenCV, achieving high accuracy, reducing manual verification effort, and optimizing
+          processing time.</p>
+        <div class="skill-tags" style="margin-bottom:18px;">
+          <span class="tag">Python</span><span class="tag">TensorFlow / Keras</span><span class="tag">OpenCV</span><span
+            class="tag">CNN</span><span class="tag">Machine Learning</span>
+        </div>
+        <a href="https://github.com/kiranganji02" target="_blank" class="project-link"><span class="project-arrow">View
+            on GitHub →</span></a>
+      </div>
+
+      <div class="project-card fade-up">
+        <span class="project-num">02 // FULL-STACK ARCHITECTURE</span>
+        <h3>Alumni Data Management System</h3>
+        <p>Developed a centralized web-based database system to store and manage graduated students' (alumni)
+          information. Designed responsive, user-friendly interfaces across all devices for administrators and alumni,
+          collaborating with team members to deliver a scalable, maintainable platform.</p>
+        <div class="skill-tags" style="margin-bottom:18px;">
+          <span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span><span
+            class="tag">Python</span><span class="tag">Flask / Django</span><span class="tag">MySQL</span>
+        </div>
+        <a href="https://github.com/kiranganji02" target="_blank" class="project-link"><span class="project-arrow">View
+            on GitHub →</span></a>
+      </div>
+
+      <div class="project-card fade-up">
+        <span class="project-num">03 // 3D GRAPHICS &amp; INTERACTIVE WEB</span>
+        <h3>Interactive 3D Engineering Portfolio</h3>
+        <p>Designed and engineered this personal portfolio featuring interactive Three.js 3D shaders, custom particle
+          dragon-fire physics, dynamic light/dark theme toggle, and responsive glassmorphism aesthetics.</p>
+        <div class="skill-tags" style="margin-bottom:18px;">
+          <span class="tag">JavaScript</span><span class="tag">Three.js</span><span class="tag">HTML5</span><span
+            class="tag">CSS3</span>
+        </div>
+        <a href="https://github.com/kiranganji02/portfolio-website" target="_blank" class="project-link"><span
+            class="project-arrow">View on GitHub →</span></a>
+      </div>
+
+      <div class="project-card fade-up">
+        <span class="project-num">04 // EMBEDDED COMPUTING &amp; IOT</span>
+        <h3>Smart Room Controller</h3>
+        <p>Built an Arduino-based smart room automation system that dynamically controls lights and ventilation systems
+          based on environmental sensor inputs — a practical IoT hardware/software integration.</p>
+        <div class="skill-tags" style="margin-bottom:18px;">
+          <span class="tag">Arduino</span><span class="tag">C++</span><span class="tag">Sensors</span><span
+            class="tag">IoT</span>
+        </div>
+        <a href="https://github.com/kiranganji02/smart-room-controller" target="_blank" class="project-link"><span
+            class="project-arrow">View on GitHub →</span></a>
+      </div>
+
+      <div class="project-placeholder fade-up" style="border-style:dashed; display:flex; flex-direction:column;
+             align-items:center; justify-content:center; text-align:center; min-height:220px;">
+        <span style="font-size:2rem; margin-bottom:16px; display:block;">🚀</span>
+        <h3 style="font-family:'Inter Tight',sans-serif; font-weight:500; font-size:0.9rem;
+                 color:var(--muted);">More intelligent systems in development...</h3>
+        <p style="font-size:0.8rem; color:var(--muted); margin-top:8px;">Continuously exploring Generative AI, Cloud
+          Microservices &amp; Reactive UIs.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── EDUCATION & CREDENTIALS ── -->
+  <section id="education">
+    <p class="section-tag">Background &amp; Credentials</p>
+    <h2 class="section-title">Education &amp; Certifications</h2>
+    <p class="section-sub">Academic foundation, professional training, and engineering activities.</p>
+
+    <div class="edu-card fade-up">
+      <div class="edu-icon">🎓</div>
+      <div class="edu-body">
+        <h3>Bachelor of Technology / Engineering in Computer Science &amp; Design</h3>
+        <div class="edu-meta">Appa Institute of Engineering and Technology, Sharnbasva University · CGPA: 7.84 / 10.0
+        </div>
+        <p>Focused on core computer science foundations, software engineering methodologies, web technologies, database
+          architecture, algorithms, and intelligent system design.</p>
+      </div>
+    </div>
+
+    <div class="edu-card fade-up">
+      <div class="edu-icon">📜</div>
+      <div class="edu-body">
+        <h3>Git Training Certification</h3>
+        <div class="edu-meta">Simplilearn · Completed 12/2025</div>
+        <p>Comprehensive training covering Git version control, branching strategies, collaborative workflows, and
+          repository management.</p>
+      </div>
+    </div>
+
+    <div class="edu-card fade-up">
+      <div class="edu-icon">🏆</div>
+      <div class="edu-body">
+        <h3>Academic Achievements &amp; Workshops</h3>
+        <div class="edu-meta">Techno-Cultural &amp; Skill Development</div>
+        <p>• <strong>AVIRAT-2025 Techno-Cultural Fest</strong>: Active participant and technical showcase
+          contributor.<br>
+          • <strong>Career Orientation Workshop</strong>: Participated in industry training and upskilling organized by
+          ABC Technology.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <div class="contact-outer" id="contact">
+    <div class="contact-inner">
+
+      <div class="fade-up">
+        <p class="section-tag">Get in touch</p>
+        <h2 class="section-title">Let's build the<br>future together.</h2>
+        <p style="color:var(--muted); font-weight:300; line-height:1.8; margin-bottom:2rem;">
+          Excited to collaborate on groundbreaking tech, intelligent systems, or ambitious engineering challenges — my
+          inbox is open!
+        </p>
+        <div class="contact-links">
+          <a href="mailto:kiranganji0406@gmail.com" class="contact-link">
+            <div class="contact-link-icon">✉️</div>
+            <div class="contact-link-body">
+              <strong>Email me</strong>
+              <span>kiranganji0406@gmail.com / kiranganji.dev@gmail.com</span>
+            </div>
+          </a>
+          <a href="https://github.com/kiranganji02" target="_blank" class="contact-link">
+            <div class="contact-link-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" style="color:var(--accent)">
+                <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504
+                .5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343
+                -3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608
+                1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832
+                .092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951
+                0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65
+                0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115
+                2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398
+                .1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566
+                4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747
+                0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+              </svg>
+            </div>
+            <div class="contact-link-body">
+              <strong>GitHub</strong>
+              <span>github.com/kiranganji02</span>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/kiran-ganji-69a3b8329/" target="_blank" class="contact-link">
+            <div class="contact-link-icon">🔗</div>
+            <div class="contact-link-body">
+              <strong>LinkedIn</strong>
+              <span>linkedin.com/in/kiran-ganji-69a3b8329</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="fade-up">
+        <div class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="form-name">Your Name</label>
+              <input id="form-name" type="text" placeholder="Alex Johnson" required />
+            </div>
+            <div class="form-group">
+              <label for="form-email">Email</label>
+              <input id="form-email" type="email" placeholder="alex@email.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="form-subject">Subject</label>
+            <input id="form-subject" type="text" placeholder="Next-Gen Project / Tech Opportunity" required />
+          </div>
+          <div class="form-group">
+            <label for="form-message">Message</label>
+            <textarea id="form-message" rows="5" placeholder="Hey Kiran, let's collaborate on..." required></textarea>
+          </div>
+          <button id="send-btn" type="button" class="btn-primary" style="align-self:flex-start;">
+            Send message →
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <p>© <span id="year">2026</span> Kiran Ganji. Built with curiosity &amp; code.</p>
+    <div class="foot-links">
+      <a href="#about">Story</a>
+      <a href="#skills">Stack</a>
+      <a href="#projects">Builds</a>
+      <a href="#education">Background</a>
+      <a href="#contact">Connect</a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="three-hero.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
