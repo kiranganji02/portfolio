@@ -55,22 +55,22 @@
     c.width = 128; c.height = 64;
     const ctx = c.getContext('2d');
     const g = ctx.createLinearGradient(0, 0, 0, 64);
-    g.addColorStop(0, '#2d1810');
-    g.addColorStop(0.4, '#1b120c');
-    g.addColorStop(0.7, '#0d0907');
-    g.addColorStop(1, '#050403');
+    g.addColorStop(0, '#1d1230');
+    g.addColorStop(0.4, '#10081c');
+    g.addColorStop(0.7, '#080410');
+    g.addColorStop(1, '#040208');
     ctx.fillStyle = g; ctx.fillRect(0, 0, 128, 64);
 
-    // Warm magma glow from below
+    // Warm amethyst glow from below
     const magma = ctx.createRadialGradient(64, 56, 4, 64, 56, 36);
-    magma.addColorStop(0, 'rgba(255, 90, 30, 0.85)');
-    magma.addColorStop(1, 'rgba(255, 90, 30, 0)');
+    magma.addColorStop(0, 'rgba(168, 85, 247, 0.85)');
+    magma.addColorStop(1, 'rgba(168, 85, 247, 0)');
     ctx.fillStyle = magma; ctx.fillRect(20, 28, 88, 36);
 
-    // Cool moonlight rim from top-right
+    // Cool periwinkle rim from top-right
     const moon = ctx.createRadialGradient(100, 12, 2, 100, 12, 28);
-    moon.addColorStop(0, 'rgba(120, 180, 255, 0.7)');
-    moon.addColorStop(1, 'rgba(120, 180, 255, 0)');
+    moon.addColorStop(0, 'rgba(160, 190, 255, 0.7)');
+    moon.addColorStop(1, 'rgba(160, 190, 255, 0)');
     ctx.fillStyle = moon; ctx.fillRect(70, 0, 58, 40);
 
     const envTex = new THREE.CanvasTexture(c);
@@ -80,22 +80,22 @@
   } catch (e) {}
 
   // ── Lighting ──
-  const ambientLight = new THREE.AmbientLight(0xffffff, 0.65);
+  const ambientLight = new THREE.AmbientLight(0xffffff, 0.7);
   scene.add(ambientLight);
 
-  const keyLight = new THREE.PointLight(0xff6a3d, 2.2, 45);
+  const keyLight = new THREE.PointLight(0xa87ffb, 2.4, 45);
   keyLight.position.set(5, 4, 6);
   scene.add(keyLight);
 
-  const rimLight = new THREE.PointLight(0x4d88ff, 1.8, 40);
+  const rimLight = new THREE.PointLight(0x6b8aff, 1.8, 40);
   rimLight.position.set(-6, 3, -4);
   scene.add(rimLight);
 
-  const bellyGlow = new THREE.PointLight(0xff4411, 1.2, 30);
+  const bellyGlow = new THREE.PointLight(0x9155fd, 1.3, 30);
   bellyGlow.position.set(0, -4, 3);
   scene.add(bellyGlow);
 
-  const throatLight = new THREE.PointLight(0xff4400, 0.2, 12);
+  const throatLight = new THREE.PointLight(0xc084fc, 0.25, 12);
   throatLight.position.set(0, 0, 0.2);
 
   // ── Procedural Textures Generator ──
@@ -180,17 +180,17 @@
 
   // 3. Leathery Wing Membrane Texture with Branching Veins
   const wingTex = createCanvasTexture(512, (ctx, s) => {
-    // Base leathery gradient
+    // Base leathery lavender/amethyst gradient
     const g = ctx.createRadialGradient(s * 0.2, s * 0.2, 10, s * 0.5, s * 0.5, s * 0.7);
-    g.addColorStop(0, '#5a2216');
-    g.addColorStop(0.4, '#38130c');
-    g.addColorStop(0.8, '#240a06');
-    g.addColorStop(1, '#150604');
+    g.addColorStop(0, '#4a2574');
+    g.addColorStop(0.4, '#301650');
+    g.addColorStop(0.8, '#1e0c34');
+    g.addColorStop(1, '#110620');
     ctx.fillStyle = g;
     ctx.fillRect(0, 0, s, s);
 
     // Vascular vein networks
-    ctx.strokeStyle = 'rgba(220, 90, 50, 0.25)';
+    ctx.strokeStyle = 'rgba(192, 132, 252, 0.3)';
     ctx.lineWidth = 2.5;
     for (let i = 0; i < 9; i++) {
       let x = 30 + Math.random() * 80;
@@ -236,15 +236,15 @@
   });
   hornBumpMap.repeat.set(1, 4);
 
-  // 5. Fire Particle Sprite Canvas
+  // 5. Lavender Fire Particle Sprite Canvas
   const fireCanvas = document.createElement('canvas');
   fireCanvas.width = fireCanvas.height = 64;
   const fCtx = fireCanvas.getContext('2d');
   const fireGrad = fCtx.createRadialGradient(32, 32, 0, 32, 32, 32);
-  fireGrad.addColorStop(0, 'rgba(255, 255, 230, 1)');
-  fireGrad.addColorStop(0.25, 'rgba(255, 170, 40, 0.9)');
-  fireGrad.addColorStop(0.6, 'rgba(230, 60, 10, 0.5)');
-  fireGrad.addColorStop(0.9, 'rgba(120, 20, 0, 0.15)');
+  fireGrad.addColorStop(0, 'rgba(255, 250, 255, 1)');
+  fireGrad.addColorStop(0.25, 'rgba(216, 180, 254, 0.95)');
+  fireGrad.addColorStop(0.6, 'rgba(168, 85, 247, 0.6)');
+  fireGrad.addColorStop(0.9, 'rgba(109, 40, 217, 0.18)');
   fireGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
   fCtx.fillStyle = fireGrad;
   fCtx.fillRect(0, 0, 64, 64);
@@ -255,24 +255,24 @@
 
   const dragonColors = {
     dark: {
-      skin: 0x1f1917,
-      skinSub: 0x3d1710,
-      belly: 0x8a3818,
-      horn: 0x181210,
-      wing: 0x4a1810,
-      spine: 0xd94420,
-      claw: 0x120e0d,
-      eye: 0xff8800,
+      skin: 0x181424,
+      skinSub: 0x2c1b48,
+      belly: 0x6b42b8,
+      horn: 0x161122,
+      wing: 0x3b2060,
+      spine: 0xa87ffb,
+      claw: 0x120d1c,
+      eye: 0xc084fc,
     },
     light: {
-      skin: 0x342926,
-      skinSub: 0x58241b,
-      belly: 0xb54d24,
-      horn: 0x221815,
-      wing: 0x6e2a1d,
-      spine: 0xb83216,
-      claw: 0x1a1412,
-      eye: 0xff5500,
+      skin: 0x322846,
+      skinSub: 0x483468,
+      belly: 0x8c5ed8,
+      horn: 0x241a36,
+      wing: 0x5a3b8c,
+      spine: 0x8b5cf6,
+      claw: 0x1c142b,
+      eye: 0xa855f7,
     }
   };
 
@@ -957,8 +957,9 @@
     matDragonSpine.color.setHex(c.spine);
     matDragonWing.color.setHex(c.wing);
     matDragonClaw.color.setHex(c.claw);
-    matDragonEye.color.setHex(c.eye);
-    keyLight.color.setHex(light ? 0xcc4422 : 0xff6a3d);
+    keyLight.color.setHex(light ? 0x8b5cf6 : 0xa87ffb);
+    bellyGlow.color.setHex(light ? 0x7c3aed : 0x9155fd);
+    rimLight.color.setHex(light ? 0x4d68e8 : 0x6b8aff);
   });
   themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
 
