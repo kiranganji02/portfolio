@@ -136,3 +136,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 // ── FOOTER YEAR ──
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+// ── INTERACTIVE GLASS SPOTLIGHT TRACKING ──
+const glassElements = document.querySelectorAll(
+  '.highlight-card, .skill-cell, .project-card, .edu-card, .contact-form, .contact-link'
+);
+
+glassElements.forEach((el) => {
+  el.addEventListener('pointermove', (e) => {
+    const rect = el.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    el.style.setProperty('--mouse-x', `${x}px`);
+    el.style.setProperty('--mouse-y', `${y}px`);
+  });
+});
+
